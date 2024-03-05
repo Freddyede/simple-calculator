@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Simple Calculator</title>
+    </head>
+    <body>
+        <script>
+            const firstValue = 2;
+            const operator = "+";
+            const secondValue = 1;
+
+            const weWorkOnTheOperator = () => {
+                let result;
+                if(operator === "+") {
+                    result = firstValue + secondValue;
+                } else if(operator === "-") {
+                    result = firstValue - secondValue;
+                } else if(operator === "*") {
+                    result = firstValue * secondValue;
+                } else if(operator === "/" && secondValue !== 0) {
+                    result = firstValue / secondValue;
+                } else {
+                    result = "Invalid operator";
+                }
+                return result;
+            }
+            console.log(weWorkOnTheOperator());
+            const doYouLikeToPlay = () => {
+                const rightPrice = Math.ceil(Math.random() * 100);
+                let name = prompt("Veuillez entrez votre nom: ");
+                let playerResult = prompt("Veuillez sélectionner un chiffre compris entre 1 et 100 :");
+
+                while(parseInt(playerResult)!== rightPrice) {
+                    if(parseInt(playerResult) < rightPrice) {
+                        alert("It's more");
+                        playerResult = prompt("Veuillez sélectionner un chiffre compris entre 1 et 100 :");
+                    }
+                    if(parseInt(playerResult) > rightPrice) {
+                        alert("It's less");
+                        playerResult = prompt("Veuillez sélectionner un chiffre compris entre 1 et 100 :");
+                    } else {
+                        alert(`Well done ${name} you won!`);
+                        return true;
+                    }
+                }
+            }
+            doYouLikeToPlay();
+        </script>
+    </body>
+</html>
