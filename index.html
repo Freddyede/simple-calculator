@@ -10,22 +10,22 @@
             const operator = "+";
             const secondValue = 1;
 
-            const weWorkOnTheOperator = () => {
+            const weWorkOnTheOperator = (numberA, numberB, operation) => {
                 let result;
-                if(operator === "+") {
-                    result = firstValue + secondValue;
-                } else if(operator === "-") {
-                    result = firstValue - secondValue;
-                } else if(operator === "*") {
-                    result = firstValue * secondValue;
-                } else if(operator === "/" && secondValue !== 0) {
-                    result = firstValue / secondValue;
+                if(operation === "+") {
+                    result = numberA + numberB;
+                } else if(operation === "-") {
+                    result = numberA - numberB;
+                } else if(operation === "*") {
+                    result = numberA * numberB;
+                } else if(operation === "/" && numberB !== 0) {
+                    result = numberA / numberB;
                 } else {
                     result = "Invalid operator";
                 }
                 return result;
             }
-            console.log(weWorkOnTheOperator());
+            console.log(weWorkOnTheOperator(firstValue, secondValue, operator));
             const doYouLikeToPlay = () => {
                 const rightPrice = Math.ceil(Math.random() * 100);
                 let name = prompt("Veuillez entrez votre nom: ");
