@@ -2,30 +2,10 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <title>Simple Calculator</title>
+        <title>Do you like to play?</title>
     </head>
     <body>
         <script>
-            const firstValue = 2;
-            const operator = "+";
-            const secondValue = 1;
-
-            const weWorkOnTheOperator = (numberA, numberB, operation) => {
-                let result;
-                if(operation === "+") {
-                    result = numberA + numberB;
-                } else if(operation === "-") {
-                    result = numberA - numberB;
-                } else if(operation === "*") {
-                    result = numberA * numberB;
-                } else if(operation === "/" && numberB !== 0) {
-                    result = numberA / numberB;
-                } else {
-                    result = "Invalid operator";
-                }
-                return result;
-            }
-            console.log(weWorkOnTheOperator(firstValue, secondValue, operator));
             const doYouLikeToPlay = () => {
                 const rightPrice = Math.ceil(Math.random() * 100);
                 let name = prompt("Veuillez entrez votre nom: ");
