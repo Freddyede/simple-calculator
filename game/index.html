@@ -9,22 +9,18 @@
             const doYouLikeToPlay = () => {
                 const rightPrice = Math.ceil(Math.random() * 100);
                 let name = prompt("Veuillez entrez votre nom: ");
+                console.log(rightPrice);
                 let playerResult = prompt("Veuillez sélectionner un chiffre compris entre 1 et 100 :");
-
                 while(parseInt(playerResult)!== rightPrice) {
                     if(parseInt(playerResult) < rightPrice) {
                         alert("It's more");
                         playerResult = prompt("Veuillez sélectionner un chiffre compris entre 1 et 100 :");
-                    }
-                    if(parseInt(playerResult) > rightPrice) {
+                    } else if(parseInt(playerResult) > rightPrice) {
                         alert("It's less");
                         playerResult = prompt("Veuillez sélectionner un chiffre compris entre 1 et 100 :");
                     }
-                    else {
-                        alert(`Well done ${name} you won!`);
-                        return true;
-                    }
                 }
+                alert(`Well done ${name} you won!`);
             }
             doYouLikeToPlay();
         </script>
